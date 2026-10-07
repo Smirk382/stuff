@@ -10,8 +10,18 @@ int factorial(int x) {
     }
     return res;
 }
-
-int main() {
-    int res = factorial(20);
-    cout << "Result: " << res << endl;
+    double findE(int steps){
+        double sum = 0;
+        for (int i = 0; i < steps; i++)
+        {
+            sum += 1 / factorial(i);
+        }
+        return sum;
+    }
+int main (){
+    int resF = factorial(10);
+    double resE = findE(12);
+    cout <<"Result F: " << resF << endl;
+    cout <<"Result E: " << resE << endl;
 }
+
